@@ -1,0 +1,8 @@
+import './styles/style.scss'
+import{ performAction} from './js/app'
+/*our index.js file inside the client folder should import the main function of your application javascript, it should import your scss, and it should export your main function from your application javascript.*/
+alert("Marjean");
+
+export {
+    performAction
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+  <div class="grid-container">
+    <header class=header>
+      <div class="mobile-menu"> </div>
+      <div class="header-wrapper">
+        <h1>Travel Journal </h1>
+  
+        <div class="Navbar">
+          <div id="nav-list">
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="social">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+      <div class="image holder">
+        <img src="https://via.placeholder.com/300.png/09f/a8edcb">
+      </div>
+      <section class="city-wrapper">
+        <div class="city-holder">
+          <form id = "form" name = "myForm" class="form" onsubmit="return Client.performAction(event)">
+          <input id="city" type="text"placeholder="Enter City here" value ="">
+         <input id ="generate" type="submit" name="" value="submit" onclick="return Client.performAction(event)" onsubmit="return Client.performAction(event)">
+        </form>
+      </div>
+      </section>
+        <section class="entry holder">
+          <div class =" title">
+        <div id = "lat"></div>
+        <div id ="long"></div>
+        <div id = "country"></div>
+          </div>
+          </section>
+</main>
+</div>
+</body>
+</html>
