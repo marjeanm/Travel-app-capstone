@@ -1,3 +1,13 @@
+//create a new date for coutdown 
+
+//api for pixabay
+
+
+//api for Weatherbit
+
+
+
+//api for Geonames
 const baseURL = "http://api.geonames.org/searchJSON?q=";
 const search = "&maxRows=1&"
 const apiKey = "username=marjeanm";
@@ -9,7 +19,15 @@ document.getElementById('generate').addEventListener("click", performAction);
 /* Function called by event listener */
 function performAction(event){
     event.preventDefault();
-  //const feeling = document.getElementById('feelings').value;
+   //countdown
+  //find the distance between now and the future date 
+  let picker = document.getElementById("picker").value;
+  let tripDay = new Date(picker).getTime();
+  let today = new Date().getTime();
+  let distance = tripDay - today;
+  let days = Math.floor(Math.abs(distance / (1000 * 60 * 60 * 24)));
+  document.getElementById("show").innerHTML = days;
+//geo name 
   const cityName = document.getElementById("city").value;
   getCity(baseURL,cityName,search,apiKey)
 
@@ -22,7 +40,7 @@ function performAction(event){
 })
 }
 
-/* Function to GET Web API Data*/
+/* Function to GET Web API Data/geonames*/
 const getCity = async (baseURL ,cityName,search, apiKey)=>{
   const res = await fetch(baseURL+cityName+search+apiKey)
   try {
@@ -37,7 +55,7 @@ const getCity = async (baseURL ,cityName,search, apiKey)=>{
 
 
 
-/* Function to POST data */
+/* Function to POST data  geonames*/
 const postData = async (url = '', data = {}) =>{
   console.log("postData Function running", data);
 
@@ -63,7 +81,7 @@ const postData = async (url = '', data = {}) =>{
 
 
 
-/* Function to GET Project Data */
+/* Function to GET Project Data geonames */
 const updateUI = async () => {
   const request = await fetch('/all');
   try{
