@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>    
-</head>
+
 <body>
   <div class="grid-container">
     <header class=header>
@@ -16,34 +17,64 @@
         <div class="Navbar">
           <div id="nav-list">
           </div>
+         
+        </div>
+        <div class="social">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
         </div>
       </div>
     </header>
     <main class="main">
-      <div class="social">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-twitter"></i>
-      </div>
+      
       <div class="image holder">
-        <img src="https://via.placeholder.com/300.png/09f/a8edcb">
+        <img  id ="blob" src="">
       </div>
       <section class="city-wrapper">
-        <div class="city-holder">
-          <form id = "form" name = "myForm" class="form" onsubmit="return Client.performAction(event)">
-          <input id="city" type="text"placeholder="Enter City here" value ="">
-         <input id ="generate" type="submit" name="" value="submit" onclick="return Client.performAction(event)" onsubmit="return Client.performAction(event)">
+        <div class="city holder">
+          <form id = "form" name = "myForm" class="form" >
+          <input id="city" type="text"placeholder="Enter City here">        
+          <input type="date" id="picker" > 
+         <input id ="generate" type="submit" name="" value="submit" >
+         
+        
         </form>
       </div>
       </section>
         <section class="entry holder">
-          <div class =" title">
+          <div class =" title">  
+
+          <div id="show"></div>
+         <div id= "travelLocation"></div>
         <div id = "lat"></div>
         <div id ="long"></div>
         <div id = "country"></div>
+        <div id = "hightemp"></div>
+        <div id = "lowtemp"></div>
+        <div id = "currentTemp"></div>
           </div>
+          </section>
+          <section class="todoList">
+            <header>
+              <h2>Your Packing list</h2>
+             
+            </header>
+            <div class="form">
+              <form >
+                <input value="" id='packing' type='text' placeholder="enter your item here">
+                <button id="click"><i class="fas fa-plus"></i></button>
+                </form>
+              <div class="lists" >
+               <ul id="toDoList" >
+                </ul>
+                <button class="clear" id="clear"> clear all</button>
+                
+                </div>
+            </div>
           </section>
 </main>
 </div>
+
 </body>
 </html>

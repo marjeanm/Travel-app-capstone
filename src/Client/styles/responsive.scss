@@ -1,0 +1,71 @@
+$layout-breakpoint-small: 600px;
+  $layout-breakpoint-medium: 768px;
+
+  @media (max-width: $layout-breakpoint-small) {
+    .grid-container {
+      text-align: center;
+      padding:0px
+    }
+    header {
+      .header {
+        width: 10vh;
+      }
+      .header-wrapper {
+        height: 11vh;
+        margin-top: 25px;
+      }
+    }
+    main {
+      
+
+      #blob {
+        width: 50%;
+        margin: 6px;
+      }
+      .holder {
+        height: 42vh;
+      }
+      .entry {
+        height: 22vh;
+      }
+
+      .todoList {
+        height: 11vh;
+      }
+      #form {
+        height: 20vh;
+      }
+      #picker {
+        margin: 12px;
+      }
+    }
+  }
+  @media (max-width: $layout-breakpoint-medium) {
+    body {
+      font-size: 25px;
+      margin: 8px;
+    }
+    .grid-container {
+      margin-top: 8px;
+    }
+    header {
+      height: 14vh;
+      .social {
+        padding: 16px;
+      }
+      input[type="text"] {
+        padding: 16px;
+      }
+    }
+    main {
+      #blob {
+        width: 40%;
+      }
+      .image {
+        height: 60vh;
+      }
+      #form {
+        height: 20vh;
+      }
+    }
+  }
